@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import './globals.css';
 import { siteConfig } from '@/lib/config';
+import { ClientLayout } from '@/components/client-layout';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -42,7 +43,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang='en' suppressHydrationWarning>
       <body className={inter.className}>
-        <div className='relative min-h-screen bg-background'>{children}</div>
+        <div className='relative min-h-screen bg-background'>
+          <ClientLayout>{children}</ClientLayout>
+        </div>
       </body>
     </html>
   );

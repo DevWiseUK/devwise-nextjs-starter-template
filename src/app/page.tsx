@@ -11,6 +11,7 @@ import {
 } from '@devwise/core';
 import Link from 'next/link';
 import { siteConfig } from '@/lib/config';
+import { SectionErrorBoundary } from '@/components';
 
 export default function HomePage() {
   return (
@@ -76,32 +77,34 @@ export default function HomePage() {
 
           <div className='mx-auto grid max-w-5xl gap-6 py-12 md:grid-cols-2 lg:grid-cols-3'>
             {/* Button Examples */}
-            <Card className='p-6'>
-              <CardHeader>
-                <h3 className='text-lg font-semibold'>Button Component</h3>
-                <p className='text-sm text-muted-foreground'>
-                  Versatile button with multiple variants
-                </p>
-              </CardHeader>
-              <div className='space-y-3'>
-                <div className='flex gap-2'>
-                  <Button variant='primary' size='sm'>
-                    Primary
-                  </Button>
-                  <Button variant='secondary' size='sm'>
-                    Secondary
-                  </Button>
+            <SectionErrorBoundary sectionName='Button Examples'>
+              <Card className='p-6'>
+                <CardHeader>
+                  <h3 className='text-lg font-semibold'>Button Component</h3>
+                  <p className='text-sm text-muted-foreground'>
+                    Versatile button with multiple variants
+                  </p>
+                </CardHeader>
+                <div className='space-y-3'>
+                  <div className='flex gap-2'>
+                    <Button variant='primary' size='sm'>
+                      Primary
+                    </Button>
+                    <Button variant='secondary' size='sm'>
+                      Secondary
+                    </Button>
+                  </div>
+                  <div className='flex gap-2'>
+                    <Button variant='outline' size='sm'>
+                      Outline
+                    </Button>
+                    <Button variant='ghost' size='sm'>
+                      Ghost
+                    </Button>
+                  </div>
                 </div>
-                <div className='flex gap-2'>
-                  <Button variant='outline' size='sm'>
-                    Outline
-                  </Button>
-                  <Button variant='ghost' size='sm'>
-                    Ghost
-                  </Button>
-                </div>
-              </div>
-            </Card>
+              </Card>
+            </SectionErrorBoundary>
 
             {/* Badge Examples */}
             <Card className='p-6'>
