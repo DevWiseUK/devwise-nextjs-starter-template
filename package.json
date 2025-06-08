@@ -1,0 +1,83 @@
+{
+  "name": "devwise-nextjs-starter-template",
+  "version": "0.1.0",
+  "type": "module",
+  "description": "A modern Next.js starter template built with DevWise Core components and utilities",
+  "homepage": "https://github.com/DevWiseUK/devwise-nextjs-starter-template#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DevWiseUK/devwise-nextjs-starter-template.git"
+  },
+  "bugs": {
+    "url": "https://github.com/DevWiseUK/devwise-nextjs-starter-template/issues"
+  },
+  "scripts": {
+    "dev": "next dev",
+    "build": "npm run check && next build",
+    "start": "next start",
+    "lint": "eslint . --ext .ts,.tsx,.js,.jsx",
+    "lint:fix": "eslint . --ext .ts,.tsx,.js,.jsx --fix",
+    "format": "prettier --write \"**/*.{ts,tsx,js,jsx,json,md}\"",
+    "format:check": "prettier --check \"**/*.{ts,tsx,js,jsx,json,md}\"",
+    "type:check": "tsc --noEmit",
+    "check": "npm run lint && npm run format:check && npm run type:check",
+    "fix": "npm run lint:fix && npm run format",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:coverage": "jest --coverage",
+    "prepare": "husky"
+  },
+  "keywords": [
+    "devwise",
+    "next.js",
+    "react",
+    "typescript",
+    "tailwind",
+    "component-library"
+  ],
+  "author": "DevWise",
+  "license": "MIT",
+  "dependencies": {
+    "@devwise/core": "^1.5.0",
+    "clsx": "^2.1.1",
+    "next": "^15.4.0",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4.1.8",
+    "@testing-library/jest-dom": "^6.6.3",
+    "@testing-library/react": "^16.3.0",
+    "@types/jest": "^29.5.14",
+    "@types/node": "^22.15.30",
+    "@types/react": "^19.1.6",
+    "@types/react-dom": "^19.1.6",
+    "@typescript-eslint/eslint-plugin": "^8.33.1",
+    "@typescript-eslint/parser": "^8.33.1",
+    "autoprefixer": "^10.4.20",
+    "eslint": "^8.57.1",
+    "eslint-config-next": "^15.3.3",
+    "eslint-config-prettier": "^10.1.5",
+    "eslint-plugin-prettier": "^5.4.1",
+    "eslint-plugin-react": "^7.34.1",
+    "eslint-plugin-react-hooks": "^5.2.0",
+    "husky": "^9.1.7",
+    "jest": "^29.7.0",
+    "jest-environment-jsdom": "^29.7.0",
+    "lint-staged": "^16.1.0",
+    "postcss": "^8.5.4",
+    "prettier": "^3.5.3",
+    "tailwindcss": "^4.1.8",
+    "ts-jest": "^29.3.4",
+    "typescript": "^5.7.2"
+  },
+  "lint-staged": {
+    "*.{ts,tsx,js,jsx}": [
+      "eslint --fix",
+      "prettier --write"
+    ],
+    "*.{json,md}": [
+      "prettier --write"
+    ]
+  }
+}
