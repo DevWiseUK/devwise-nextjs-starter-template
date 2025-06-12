@@ -62,7 +62,8 @@ const nextConfig = {
 
   // Bundle analyzer support
   ...(process.env.ANALYZE === 'true' && {
-    webpack: (config) => {
+    webpack: (config: any) => {
+      // eslint-disable-next-line @typescript-eslint/no-var-requires
       const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
       config.plugins.push(
         new BundleAnalyzerPlugin({
