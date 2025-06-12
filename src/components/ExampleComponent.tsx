@@ -1,7 +1,7 @@
 'use client';
 
-import { useState } from 'react';
 import { Button, Card, Badge } from '@devwise/core';
+import { useState } from 'react';
 
 export interface FeatureCardProps {
   title: string;

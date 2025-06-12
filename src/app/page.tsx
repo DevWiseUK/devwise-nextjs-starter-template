@@ -10,6 +10,7 @@ import {
   formatCurrency,
 } from '@devwise/core';
 import Link from 'next/link';
+
 import { siteConfig } from '@/lib/config';
 
 export default function HomePage() {

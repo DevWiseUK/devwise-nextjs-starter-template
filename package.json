@@ -53,6 +53,7 @@
     "@types/node": "^22.15.30",
     "@types/react": "^19.1.6",
     "@types/react-dom": "^19.1.6",
+    "@types/webpack": "^5.28.5",
     "@typescript-eslint/eslint-plugin": "^8.33.1",
     "@typescript-eslint/parser": "^8.33.1",
     "autoprefixer": "^10.4.20",
@@ -70,6 +71,7 @@
     "prettier": "^3.5.3",
     "tailwindcss": "^4.1.8",
     "ts-jest": "^29.3.4",
+    "ts-node": "^10.9.2",
     "typescript": "^5.7.2",
     "webpack-bundle-analyzer": "^4.10.2"
   },

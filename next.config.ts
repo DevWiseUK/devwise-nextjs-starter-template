@@ -1,5 +1,7 @@
-/** @type {import('next').NextConfig} */
-const nextConfig = {
+import type { NextConfig } from 'next';
+import type { Configuration } from 'webpack';
+
+const nextConfig: NextConfig = {
   experimental: {
     typedRoutes: true,
     optimizePackageImports: ['@devwise/core'],
@@ -62,9 +64,9 @@ const nextConfig = {
 
   // Bundle analyzer support
   ...(process.env.ANALYZE === 'true' && {
-    webpack: (config) => {
+    webpack: (config: Configuration) => {
       const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
-      config.plugins.push(
+      config.plugins?.push(
         new BundleAnalyzerPlugin({
           analyzerMode: 'static',
           openAnalyzer: false,
